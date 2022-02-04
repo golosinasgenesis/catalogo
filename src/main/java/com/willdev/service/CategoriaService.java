@@ -2,11 +2,16 @@ package com.willdev.service;
 
 import java.util.List;
 
-import com.willdev.domain.Categoria;
+import com.willdev.domain.CategoriaEntity;
+import com.willdev.model.CategoriaRequest;
 
 public interface CategoriaService {
 	
-	Categoria registrar(Categoria categoria);
-	List<Categoria> listaCategorias();
+	List<CategoriaEntity> findAllCategorias();
+	CategoriaEntity findCategoriaById(Long id);
+	CategoriaEntity saveCategorias(CategoriaRequest categoria);
+	CategoriaEntity saveCategoria(CategoriaRequest categoria);
+	CategoriaEntity updateCategoria(CategoriaRequest categoria);
+	void deleteCategoriaById(Long id);
 
 }
